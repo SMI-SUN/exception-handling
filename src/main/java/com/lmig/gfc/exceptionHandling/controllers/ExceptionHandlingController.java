@@ -41,7 +41,7 @@ public class ExceptionHandlingController {
    public ModelAndView handleUrl(String probablyAUrl) throws MalformedURLException {
        ModelAndView mv = new ModelAndView("exceptionHandling/default");
        try {
-       mv.addObject("urlFailure", new URL(probablyAUrl));
+       mv.addObject("urlResult", new URL(probablyAUrl));
        } catch(MalformedURLException ioobe) {
     	   mv.addObject("urlFailure", "not a valid URL"); 
       }
